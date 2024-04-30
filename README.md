@@ -1,3 +1,6 @@
+## setup
+setting now...
+
 ## command
 
 ### 形態素解析と単語の抽出
