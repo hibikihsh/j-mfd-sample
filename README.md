@@ -1,5 +1,18 @@
-https://github.com/soramame0518/j-mfd
-
 ### command
 
-python ./j-mfd/word_segmentation.py -f data.txt
+### 形態素解析と単語の抽出
+
+```python
+python word_segmentation.py -f {data_path}
+```
+
+### グラフ化
+
+```python
+python sortiong_words.py
+```
+
+### references
+
+- https://github.com/soramame0518/j-mfd
+- https://confit.atlas.jp/guide/event-img/jsai2018/3O1-OS-1a-01/public/pdf?type=in
