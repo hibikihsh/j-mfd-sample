@@ -38,7 +38,6 @@ def execute_Mecab(segmented_str, text):
 
     return segmented_str
 
-# メイン関数
 if __name__ == '__main__':
     m = MeCab.Tagger(ipadic.MECAB_ARGS)
     segmented_str = ''
