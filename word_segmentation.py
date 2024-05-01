@@ -1,17 +1,3 @@
-# coding:utf-8
-# word_segmentation.py
-# by Yasuhiro Taguchi and Kazutoshi Sasahara
-# Last update: 2018.08.26 Released under the MIT license
-
-# This program segments Japanese sentences into words.
-# This preprosessing is required before using J-MFD.
-# Fist, install Anaconda (Python3.6) https://www.anaconda.com/
-# Second, install MeCab related packages:
-# In the case of Ubuntu: sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8; pip install mecab-python3
-# In the case of Mac (Homebrew): brew install mecab mecab-ipadic; pip install mecab-python3
-# Then, type
-# python word_segmentation.py -f input.txt
-
 import MeCab
 import re
 import argparse
