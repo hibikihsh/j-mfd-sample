@@ -35,23 +35,13 @@ def sort_dict(d):
 def group_objects_by_value_frequency(data):
     for number, texts in data.items():
         aggregated_dict = {}
-        for value_dict in texts:  # valueが辞書であると仮定
-            for key in value_dict:  # 辞書のキーを個別に処理
+        for value_dict in texts:
+            for key in value_dict:
                 if key in aggregated_dict:
                     aggregated_dict[key] += value_dict[key]
                 else:
                     aggregated_dict[key] = value_dict[key]
     return aggregated_dict
-
-    # value_counts = Counter(tuple(obj.values()) number, texts in data.items():)
-
-    # grouped_objects = {}
-    # for obj, count in value_counts.items():
-    #     if count not in grouped_objects:
-    #         grouped_objects[count] = []
-    #     grouped_objects[count].append(obj)
-
-    # return grouped_objects
 
 if __name__ == '__main__':
     m = MeCab.Tagger(ipadic.MECAB_ARGS)
@@ -96,25 +86,3 @@ if __name__ == '__main__':
 
             print(number, total_word_count)
             summarized_data = group_objects_by_value_frequency(arr_group_by_number_for_dic)
-
-    # # segmented.txtに書き込み
-    # with open(opath,'w', encoding='utf-8') as f:
-    #     f.write(segmented_str)
-
-    # # 形態素解析したデータ（segmented.txt）からJ-MFD.csvを使って単語を集計
-    # j_mfd_text_counts = {}
-    # with open(opath, encoding='utf-8') as f:
-    #     for i,text in enumerate(f):
-    #         for word in j_mfd_2018_texts:
-    #             count = text.count(word)
-    #             if count > 0:
-    #                 if word not in j_mfd_text_counts:
-    #                     j_mfd_text_counts[word] = count
-    #                 else:
-    #                     j_mfd_text_counts[word] += count
-
-    # output = [f"{word},{count}" for word, count in j_mfd_text_counts.items()]
-
-    # # 単語の集計データをcsvに書き込み
-    # with open("./data/j_mfd_text_counts.csv", 'w', encoding='utf-8') as f:
-    #     f.write('\n'.join(output))
