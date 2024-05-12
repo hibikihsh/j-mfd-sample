@@ -6,13 +6,7 @@ setting now...
 ### 形態素解析と単語の抽出
 
 ```python
-python word_segmentation.py -f {data_path}
-```
-
-### グラフ化
-
-```python
-python sortiong_words.py
+python main.py -f {file_path}
 ```
 
 ## references
